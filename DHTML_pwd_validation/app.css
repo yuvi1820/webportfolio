@@ -1,0 +1,54 @@
+.title {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: olive;
+}
+
+ul {
+    border: 1px solid;
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ccc;
+}
+ul li {
+    list-style: none;
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.msg {
+    text-align: center;
+    color: green;
+    font-size: 20px;
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+    position: relative;
+    top: 2px;
+    display: none;
+}
+
+.pwdValidationList {
+    position: absolute;
+    top: 160px;
+    border: 1px solid;
+    left: 460px;
+    display: none;
+}
+
+.pwdValidationList li {
+    color: red;
+}
+
+.validated {
+    font-weight: bold;
+    color: green !important;
+}
