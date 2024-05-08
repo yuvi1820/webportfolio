@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="capthcaLib.js"></script>
+        <style>
+            .capthcaText {
+                text-align: center;
+                width: 80px;
+                margin: 20px;
+                padding: 10px;
+                font-weight: bold;
+                border: 2px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="capthcaText"></div>
+        <button onclick="generateCapthcaText()">Generate</button>
+        <input type="text"> <input type="button" value="Validate">
+        <script>
+            var possibleStrings = ['U', 'L', 'N'];
+            
+            var generateCapthcaText = () => {
+                // var patternLength = prompt("enter capthca size");
+                var patternLength = 5;
+                var pattern = '';
+                for (var i = 0; i < patternLength; i++) {
+                    var index = Math.round(Math.random() * (possibleStrings.length -1));
+                    pattern += possibleStrings[index];
+                }
+                console.log(pattern);
+                var patterns = pattern.split('');
+                console.log(patterns);
+
+                var randomCapthca = '';
+                for (var i = 0 ; i < patterns.length; i++) {
+                    switch(patterns[i]) {
+                        case 'L':
+                            randomCapthca += generateLowerCaseRandomChar();
+                            break;
+                        case 'U':
+                            randomCapthca += generateUpperCaseRandomChar(); 
+                            break;
+                        case 'N':
+                            randomCapthca += generateRandomNumber();
+                            break;
+                    }
+                }
+                console.log(randomCapthca);
+                document.querySelector(".capthcaText").innerHTML = randomCapthca;
+            }
+            
+        </script>
+    </body>
+</html>

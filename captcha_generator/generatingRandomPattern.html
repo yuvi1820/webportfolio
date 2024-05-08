@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var possibleStrings = ['U', 'L', 'N'];
+            
+
+            var patternLength = prompt("enter capthca size");
+            var pattern = '';
+            for (var i = 0; i < patternLength; i++) {
+                var index = Math.round(Math.random() * (possibleStrings.length -1));
+                pattern += possibleStrings[index];
+            }
+            console.log(pattern);
+            
+        </script>
+    </body>
+</html>
